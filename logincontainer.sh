@@ -18,7 +18,7 @@ read CONTAINER
 
 ##LOGIN TO CONTAINER 
 
-ct=$CONTAINER && sudo nsenter --target $(docker inspect --format {{.State.Pid}} $ct) --moun --uts --ipc --net --pid
+ct=$CONTAINER && nsenter --target $(docker inspect --format {{.State.Pid}} $ct) --moun --uts --ipc --net --pid
 
 
 
